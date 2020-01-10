@@ -1,30 +1,8 @@
-class List {
-  constructor() {
-    this.data = [];
-  }
-
-  add(data){
-    this.data.push(data);
-    console.log(this.data);
+class Matematica {
+  /* Métodos estáticos: para passar alguma informação para ele e/ou retornar, independente do restante da classe. Geralmente quando houver métodos estáticos, não vai haver constructors.*/
+  static soma(a, b){
+    return a + b;
   }
 }
 
-class TodoList extends List{  
-  constructor(){
-    super();
-
-    this.usuario = "Elias";
-  }
-
-  mostraUsuario() {
-    console.log(this.usuario);
-  }
-}
-
-var MinhaLista = new TodoList();
-
-document.getElementById('novotodo').onclick = function(){
-  MinhaLista.add('Novo todo');
-}
-
-MinhaLista.mostraUsuario();
+console.log(Matematica.soma(1, 2));
