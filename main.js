@@ -1,8 +1,15 @@
-class Matematica {
-  /* Métodos estáticos: para passar alguma informação para ele e/ou retornar, independente do restante da classe. Geralmente quando houver métodos estáticos, não vai haver constructors.*/
-  static soma(a, b){
-    return a + b;
+const usuario = { nome: 'Diego'};
+
+usuario.nome = 'Cleiton';
+
+console.log(usuario);
+
+function teste(x){
+  let y = 2;
+
+  if(x > 5){
+    console.log(x, y);
   }
 }
 
-console.log(Matematica.soma(1, 2));
+console.log(teste(10));
