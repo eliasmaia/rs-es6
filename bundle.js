@@ -1,25 +1,55 @@
 "use strict";
 
-var arr = [1, 2, 3, 4, 5, 8, 9];
-var newArr = arr.map(function (item, index) {
-  return item + index;
+var arr = [1, 2, 3, 4, 5, 6];
+/* Antes 
+const newArr = arr.map(function(item) {
+	return item * 2;
+});
+
+Só um parâmetro, pode fazer isso:
+
+const newArr = arr.map(item => {
+	return item * 2;
+});
+
+*/
+
+/* Quando a função não tem muito processamento, e só retorna algo, pode-se fazer isso: */
+
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
 console.log(newArr);
+/* Isso é bom em relação à verbosidade, quando se usa função anônima */
 
-const sum = arr.reduce(function(total, next){
-	return total + next;
-});
+/* Criando funções com arrow function e constantes */
 
-console.log(sum);
+var teste = function teste() {
+  return [1, 2, 3];
+};
 
-const filter = arr.filter(function(item){
-	return item % 2 === 0;
-});
+var teste1 = function teste1() {
+  return 'teste';
+};
 
-console.log(filter)
+var teste2 = function teste2() {
+  nome: 'Diego';
+}; //não vai funcionar usar chaves para retornar objeto
 
-const find = arr.find(function(item){
-	return item === 2;
-});
+/* Deveria ser assim: 
 
-console.log(find);
+const teste = () => {
+	return { nome: 'Diego'}
+}; */
+
+/* Para retornar o objeto, tem que colocar o parentese em volta da chave */
+
+
+var teste3 = function teste3() {
+  return {
+    nome: 'Diego'
+  };
+};
+
+console.log(teste());
+console.log(teste3());
