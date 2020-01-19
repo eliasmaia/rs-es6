@@ -1,17 +1,25 @@
 "use strict";
 
-var usuario = {
-  nome: 'Diego'
-};
-usuario.nome = 'Cleiton';
-console.log(usuario);
+var arr = [1, 2, 3, 4, 5, 8, 9];
+var newArr = arr.map(function (item, index) {
+  return item + index;
+});
+console.log(newArr);
 
-function teste(x) {
-  var y = 2;
+const sum = arr.reduce(function(total, next){
+	return total + next;
+});
 
-  if (x > 5) {
-    console.log(x, y);
-  }
-}
+console.log(sum);
 
-console.log(teste(10));
+const filter = arr.filter(function(item){
+	return item % 2 === 0;
+});
+
+console.log(filter)
+
+const find = arr.find(function(item){
+	return item === 2;
+});
+
+console.log(find);

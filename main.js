@@ -1,15 +1,7 @@
-const usuario = { nome: 'Diego'};
+const arr = [1, 2, 3, 4, 5, 8, 9]
 
-usuario.nome = 'Cleiton';
+const newArr = arr.map(function(item){
+	return item * 2;
+});
 
-console.log(usuario);
-
-function teste(x){
-  let y = 2;
-
-  if(x > 5){
-    console.log(x, y);
-  }
-}
-
-console.log(teste(10));
+console.log(newArr);
