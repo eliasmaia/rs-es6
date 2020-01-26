@@ -1,6 +1,12 @@
 "use strict";
 
-var nome = "Elias";
+var nome = 'Elias';
 var idade = 25;
-console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos.');
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos."));
+/* Quando o nome da propriedade é igual ao nome da variável dentro do objeto, pode deixar apenas um deles, sem precisar repetir.*/
+
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: 'dot'
+};
+console.log(usuario);

@@ -1,5 +1,11 @@
-const nome = "Elias";
+const nome = 'Elias';
 const idade = 25;
 
-console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos.');
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
+/* Quando o nome da propriedade é igual ao nome da variável dentro do objeto, pode deixar apenas um deles, sem precisar repetir.*/
+const usuario = {
+	nome,
+	idade,
+	empresa: 'dot',
+}
+
+console.log(usuario);
