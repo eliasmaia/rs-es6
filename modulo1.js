@@ -66,3 +66,46 @@ const filter50 = dobro.filter(function(item){
 
 console.log(dobro)
 console.log(filter50)
+
+/* 3o exercicio - Transformar função em arrow function */
+
+const arr = [1, 2, 3, 4, 5];
+
+arr.map(function(item){
+	return item + 10;
+});
+
+//depois
+arr.map(item => {
+	return item * 2;
+});
+
+/* 3.2 Transformando função normal em arrow function usando const */
+const usuario = { nome: 'Diego', idade: 26 };
+
+function mostraIdade(usuario){
+	return usuario.idade;
+}
+
+mostraIdade(usuario);
+
+//depois
+const mostraIdade1 = (usuario) => ({ idade });
+
+console.log(mostraIdade1(usuario))
+
+/* 3.3 Arrow functions e valores padrão*/
+
+const nome = "Elias"
+const idade = 25
+
+function mostraUsuario2(nome = 'Diego', idade = 18){
+	return { nome, idade };
+}
+
+const showUser = (nome = 'Diego', idade = 18) => ({ nome, idade});
+
+console.log(mostraUsuario2(nome, idade))
+console.log(mostraUsuario2(nome))	 
+console.log(showUser(nome, idade))
+console.log(showUser(nome))	

@@ -125,3 +125,60 @@ var filter50 = dobro.filter(function (item) {
 });
 console.log(dobro);
 console.log(filter50);
+/* 3o exercicio - Transformar função em arrow function */
+
+var arr = [1, 2, 3, 4, 5];
+arr.map(function (item) {
+  return item + 10;
+}); //depois
+
+arr.map(function (item) {
+  return item * 2;
+});
+/* 3.2 Transformando função normal em arrow function usando const */
+
+var usuario = {
+  nome: 'Diego',
+  idade: 26
+};
+
+function mostraIdade(usuario) {
+  return usuario.idade;
+}
+
+mostraIdade(usuario); //depois
+
+var mostraIdade1 = function mostraIdade1(usuario) {
+  return {
+    idade: idade
+  };
+};
+
+console.log(mostraIdade1(usuario));
+/* 3.3 Arrow functions e valores padrão*/
+
+var nome = "Elias";
+var idade = 25;
+
+function mostraUsuario2() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+}
+
+var showUser = function showUser() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+};
+
+console.log(mostraUsuario2(nome, idade));
+console.log(mostraUsuario2(nome));
+console.log(showUser(nome, idade));
+console.log(showUser(nome));
