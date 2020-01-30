@@ -270,3 +270,19 @@ var usuar = 'Elias';
 var idae = 25;
 console.log('o usuario ' + usuario + ' possui ' + idade + ' anos');
 console.log("o usuario ".concat(usuar, " possui ").concat(idae, " anos."));
+/* Exercicio 7 - Object Short Syntax */
+
+var name = "Joshua";
+var age = 23;
+var usr = {
+  name: name,
+  age: age,
+  cidade: 'Teresina'
+}; //depois
+
+var usr1 = {
+  name: name,
+  age: age,
+  cidade: 'Teresina'
+};
+console.log(usr1);

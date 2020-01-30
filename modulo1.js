@@ -176,3 +176,22 @@ const idae = 25;
 
 console.log('o usuario ' + usuario + ' possui ' + idade + ' anos');
 console.log(`o usuario ${usuar} possui ${idae} anos.`);
+
+/* Exercicio 7 - Object Short Syntax */
+const name = "Joshua";
+const age = 23;
+
+const usr = {
+	name: name,
+	age: age,
+	cidade: 'Teresina',
+};
+
+//depois
+const usr1 = {
+	name,
+	age,
+	cidade: 'Teresina',
+};
+
+console.log(usr1);
