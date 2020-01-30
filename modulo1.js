@@ -168,3 +168,11 @@ console.log(usuario2);
 /* alterando propriedades aninhadas de um objeto */
 const usuario3 = { ...user, endereco: { ...user.endereco, cidade: 'Lontras'}};
 console.log(usuario3);
+
+
+/* Exercicio 6 - template literals */
+const usuar = 'Elias';
+const idae = 25;
+
+console.log('o usuario ' + usuario + ' possui ' + idade + ' anos');
+console.log(`o usuario ${usuar} possui ${idae} anos.`);

@@ -264,3 +264,9 @@ var usuario3 = _objectSpread({}, user, {
 });
 
 console.log(usuario3);
+/* Exercicio 6 - template literals */
+
+var usuar = 'Elias';
+var idae = 25;
+console.log('o usuario ' + usuario + ' possui ' + idade + ' anos');
+console.log("o usuario ".concat(usuar, " possui ").concat(idae, " anos."));
