@@ -136,3 +136,35 @@ function mostraInfo2({ nome, idade }){
 }
 
 console.log(mostraInfo2(usuario));
+
+/* 5º Exercicio */
+const arr2 = [1, 2, 3, 4, 5, 6]
+
+/* rest com array */
+const [x, ...y] = arr2;
+console.log(x);
+console.log(y);
+
+/* somando todos os parâmetros*/
+function soma2(...params){
+	return params.reduce((total, next) => total + next);
+}
+
+console.log(soma2(1, 2, 3, 4, 5, 6));
+
+const user = {
+ nome: 'Diogo',
+ idade: 24,
+ endereco: {
+ cidade: 'Rio do Sul',
+ uf: 'SC',
+ pais: 'Brasil',
+ }
+};
+
+/* copia-se todas as propriedades de um objeto, mudando somente aquela que se deseja*/
+const usuario2 = {...user, nome: 'Gabriel'};
+console.log(usuario2);
+/* alterando propriedades aninhadas de um objeto */
+const usuario3 = { ...user, endereco: { ...user.endereco, cidade: 'Lontras'}};
+console.log(usuario3);
