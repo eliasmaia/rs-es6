@@ -109,3 +109,30 @@ console.log(mostraUsuario2(nome, idade))
 console.log(mostraUsuario2(nome))	 
 console.log(showUser(nome, idade))
 console.log(showUser(nome))	
+
+/* 4o Exercicio - Desestruturação*/
+
+const empresa = {
+	nome1: 'Rocketseat',
+	endereco: {
+		cidade: 'Rio do Sul',
+		estado: 'SC',
+	}
+};
+
+const { nome1, endereco: {cidade, estado} } = empresa;
+console.log(nome);
+console.log(cidade);
+console.log(estado);
+
+/* 4.2 desestruturação em parâmetros */
+
+function mostraInfo(usuario){
+	return `${usuario.nome} tem ${usuario.idade} anos.`;
+}
+
+function mostraInfo2({ nome, idade }){
+	return `${nome} tem ${idade} anos.`;
+}
+
+console.log(mostraInfo2(usuario));

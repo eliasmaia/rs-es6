@@ -182,3 +182,32 @@ console.log(mostraUsuario2(nome, idade));
 console.log(mostraUsuario2(nome));
 console.log(showUser(nome, idade));
 console.log(showUser(nome));
+/* 4o Exercicio - Desestruturação*/
+
+var empresa = {
+  nome1: 'Rocketseat',
+  endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC'
+  }
+};
+var nome1 = empresa.nome1,
+    _empresa$endereco = empresa.endereco,
+    cidade = _empresa$endereco.cidade,
+    estado = _empresa$endereco.estado;
+console.log(nome);
+console.log(cidade);
+console.log(estado);
+/* 4.2 desestruturação em parâmetros */
+
+function mostraInfo(usuario) {
+  return "".concat(usuario.nome, " tem ").concat(usuario.idade, " anos.");
+}
+
+function mostraInfo2(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return "".concat(nome, " tem ").concat(idade, " anos.");
+}
+
+console.log(mostraInfo2(usuario));
